@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -156,7 +160,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 70px;
     transition: 0.3s;
     z-index: 1000;
 }
@@ -187,6 +191,11 @@ header nav .links a{
     text-transform: capitalize;
     font-size: 18px;
     transition: 0.3s;
+}
+
+header nav .links a.active{
+    color: var(--main_color);
+    font-weight: 600;
 }
 
 header nav .links a:hover{
@@ -481,7 +490,7 @@ header nav .icons a:hover{
 }
 
 .contact .social_contact .links a i{
-    color: var(--bg_color);
+    color: var(--black_color);
     margin-right: 5px;
     width: 45px;
     height: 45px;
@@ -529,7 +538,7 @@ header nav .icons a:hover{
 
 .contact form .inputs_form input:focus,
 .contact form .inputs_form textarea:focus{
-    border: var(--main_color);
+    border: 1px solid var(--main_color);
 }
 
 .contact form .btn{
@@ -557,6 +566,10 @@ header .links .logo,
 }
 
 @media (max-width:1000px) {
+    header{
+        height: 80px;
+    }
+
     .container{
         width: 90%;
     }
@@ -716,7 +729,18 @@ header .links .logo,
 }
 
 
+
+
+
+
+
 @media (max-width:500px){
+    .btn{
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+
     header nav .icons a {
         font-size: 20px;
     }
@@ -737,5 +761,120 @@ header .links .logo,
 
     .icon_menu{
         margin-left: 15px;
+    }
+
+
+    .hero .div_text h4{
+        font-size: 22px;
+    }
+
+    .hero .div_text h1 {
+        font-size: 40px;
+    }
+
+    .hero .div_text h2 {
+        font-size: 40px;
+    }
+
+    .hero .div_text p {
+        font-size: 14px;
+        margin: 25px auto;
+        width: 100%;
+    }
+
+    .hero .btn{
+        font-size: 16px;
+        padding: 14px 30px;
+    }
+
+    .hero .div_img{
+        width: 75%;
+    }
+
+
+    .about .div_text h2{
+        font-size: 30px;
+    }
+
+    .about .div_text h4{
+        font-size: 20px;
+    }
+
+    .about .div_text p{
+        font-size: 14px;
+    }
+
+    .about .div_text ul li{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .about .div_img{
+        width: 85%;
+    }
+
+    .top_section h2{
+        font-size: 22px;
+    }
+
+    .services .boxs .box{
+        width: 100%;
+    }
+
+    .services .boxs .box i{
+        font-size: 55px;
+    }
+
+
+
+    .projects .project_box,
+    .projects .project_box.project_box_2{
+        flex-direction: column;
+    }
+
+    .projects .project_box img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .projects .project_box .text{
+        width: 90%;
+    }
+
+    .projects .project_box .text p{
+        margin: 20px 0 30px;
+    }
+
+    .projects .project_box .text h3 a{
+        font-size: 23px;
+    }
+
+
+    .contact .social_contact .links{
+        flex-direction: column;
+    }
+    .contact .social_contact .links a{
+        width: 100%;
+    }
+
+    .projects{
+        padding-bottom: 40px;
+    }
+    .contact{
+        padding-top: 0;
+    }
+
+    .contact .top_section{
+        margin-bottom: 60px;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    .contact form .inputs_form input {
+        width: 100%;
+        padding: 15px 20px;
+        margin-bottom: 20px;
     }
 }

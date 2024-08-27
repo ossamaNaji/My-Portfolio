@@ -30,29 +30,34 @@
         <nav class="container">
             <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
 
-            <div class="links">
-                <a href="#" class="active">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact</a>
+            <div class="links" id="links">
+                <span class="close_menu" onclick="OpenCloseMenu()"><i class="fa-solid fa-xmark"></i></span>
+                <a href="#home" class="logo"><img src="img/logo.png" alt=""></a>
+
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
 
             <div class="icons">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100094435581582" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/njossama/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/njossama" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+
+                <span class="icon_menu" onclick="OpenCloseMenu()"><i class="fa-solid fa-bars"></i></span>
             </div>
         </nav>
     </header>
 
 
-    <div class="hero">
+    <div class="hero" id="home">
         <div class="container">
 
             <div class="div_text">
                 <h4>Hello, i'm</h4>
-                <h1><span>Ossama N.</span></h1>
+                <h1><span>Ossama Naji</span></h1>
                 <h2>Web designer</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quaerat veniam dolore nobis obcaecati reprehenderit, totam incidunt impedit expedita tempore!</p>
                 
@@ -70,7 +75,7 @@
     </div>
 
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="div_text">
                 <h5>About me</h5>
@@ -89,17 +94,17 @@
                 </ul>
 
 
-                <a href="src/ossama naji.pdf.pdf" class="btn" download>Download CV</a>
+                <a href="src/Ossama Naji CV.pdf" class="btn" download>Download CV</a>
             </div>
 
             <div class="div_img">
-                <img src="img/about.jpg" alt="">
+                <img src="img/about.jpeg" alt="">
             </div>
         </div>
     </section>
 
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <div class="top_section">
                 <h2>Our <span>Services</span></h2>
@@ -132,7 +137,7 @@
 
 
 
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="container">
             <div class="top_section">
                 <h2>Explore my Popular <span>Projects</span></h2>
@@ -147,6 +152,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, eius quos? Deleniti.</p>
 
                     <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                    
                 </div>
             </div>
 
@@ -208,17 +214,17 @@
                 </div>
             </div>
 
-            <form action="">
+            <form action="https://api.sheetmonkey.io/form/338KrGZPXRLQ4Ds1tXboeq" method="post">
                 <div class="inputs_form">
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Email">
-                    <input type="text" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="text" placeholder="Full Name" name="name" required>
+                    <input type="text" placeholder="Email" name="email" required>
+                    <input type="text" placeholder="Phone Number" name="phone" required>
+                    <input type="text" placeholder="Subject" name="subject" required>
 
-                    <textarea name="" id="" rows="10" placeholder="Your Message Here ..."></textarea>
+                    <textarea name="message" required id="" rows="10" placeholder="Your Message Here ..."></textarea>
                 </div>
 
-                <button class="btn">Send Message</button>
+                <button type="submit" class="btn">Send Message</button>
             </form>
         </div>
     </section>
@@ -226,5 +232,6 @@
 
 
     <script src="js/app.js"></script>
+
 </body>
 </html>
